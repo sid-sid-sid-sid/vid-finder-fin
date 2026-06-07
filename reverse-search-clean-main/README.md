@@ -1,1 +1,0 @@
-A Python script that identifies videos by extracting distinctive frames using a CLIP AI model, reverse-image-searching them via Bing Visual Search, and returning the identified title and YouTube URL as JSON.
