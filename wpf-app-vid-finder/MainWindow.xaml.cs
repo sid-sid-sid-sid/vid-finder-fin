@@ -52,7 +52,7 @@ namespace filmfinder
             }
             catch (Exception ex)
             {
-                SetStatus($"⚠  Unexpected error: {ex.Message}");
+                SetStatus($"  Unexpected error: {ex.Message}");
             }
             finally
             {
@@ -123,7 +123,7 @@ namespace filmfinder
         {
             if (r.Error is not null)
             {
-                SetStatus($"⚠  Error: {r.Error}");
+                SetStatus($"  Error: {r.Error}");
                 return;
             }
 
@@ -132,13 +132,13 @@ namespace filmfinder
 
             if (!hasTitle && !hasUrl)
             {
-                SetStatus("❌  Can't find video");
+                SetStatus("  Can't find video");
                 return;
             }
 
             if (hasUrl)
             {
-                SetStatus($"✅  Found: {r.Title ?? r.YoutubeUrl}  —  opening…");
+                SetStatus($"  Found: {r.Title ?? r.YoutubeUrl}  —  opening…");
                 OpenUrl(r.YoutubeUrl!);
                 return;
             }
